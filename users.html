@@ -3,6 +3,7 @@
     <head>
         <title>count</title>
         <meta-charset="UTF-8">
+        <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
       
     </head>
     <body>
@@ -13,11 +14,8 @@
     <th class="email_address">Email</th>
     <th class="contact_no"> Contact No</th>
   </tr>
-    <tr>
-        <td class="data1"></td>
-        <td class="data2"></td>
-
-    </tr>
+  
+  
   </table>
 
   <form action="/action_page.php">
@@ -36,17 +34,16 @@
   <input type="button" id="button" value="Submit">
 </form> 
  <script> 
- $(document).ready(function(){
+  $(document).ready(function(){
     
      $('#button').click(function(){
-        event.preventDefault();
-     
-       var first=  $('#first_name').val();
-             $('.data1').append("first");
-            
         
-
-         
+     
+       var first =  $('#first_name').val();
+       var second =  $('#last_name').val();
+       var third =  $('#email_address').val();
+       var fourth =  $('#contact_no').val();
+       $('table').append('<tr><td>' + first + '</td>'+'<td>' + second + '</td>'+'<td>' + third + '</td>'+'<td>' + fourth + '</td></tr>'); 
      })
  })
 
