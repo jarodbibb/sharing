@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+    <head>
+        <title>count</title>
+        <meta-charset="UTF-8">
+      
+    </head>
+    <body>
+<table> 
+<tr>
+    <th class="first_name">Firstname</th>
+    <th class="last_name">Lastname</th> 
+    <th class="email_address">Email</th>
+    <th class="contact_no"> Contact No</th>
+  </tr>
+    <tr>
+        <td class="data1"></td>
+        <td class="data2"></td>
+
+    </tr>
+  </table>
+
+  <form action="/action_page.php">
+  First name:<br>
+  <input type="text" id="first_name" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" id="last_name" name="lastname" value="Mouse">
+  <br>
+  Email Address:<br>
+  <input type="text" id="email_address" name="emailaddress" value="Mouse">
+  <br>
+  Contact No.:<br>
+  <input type="text" id="contact_no" name="contactno" value="Mouse">
+  <br><br>
+  <input type="button" id="button" value="Submit">
+</form> 
+ <script> 
+ $(document).ready(function(){
+    
+     $('#button').click(function(){
+        event.preventDefault();
+     
+       var first=  $('#first_name').val();
+             $('.data1').append("first");
+            
+        
+
+         
+     })
+ })
+
+ 
+ </script>
+</body>
+</html>
